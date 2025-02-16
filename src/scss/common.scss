@@ -1,0 +1,69 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+@import "base/null";
+
+
+.h1 {
+    font-family: $fontTitle;
+    @include adaptiveValue("font-size", 68, 32);
+    @include adaptiveValue("line-height", 88, 48);
+
+    text-align: center;
+    text-transform: capitalize;
+    color: $whiteColor;
+    margin-bottom: toRem(22);
+    &::selection {
+        background: $accent;
+    }
+}
+
+.h2 {
+    font-family: $fontTitle;
+    text-align: center;
+    text-transform: capitalize;
+    color: $mainColor;
+    margin-bottom: toRem(22);
+    @include adaptiveValue("font-size", 54, 28);
+    @include adaptiveValue("line-height", 70, 40);
+    &::selection {
+        background: $accent;
+    }
+}
+
+.h3 {
+    font-family: $fontFamily;
+    line-height: toRem(47);
+    font-weight: 500;
+    text-transform: capitalize;
+    color: $mainColor;
+    margin-bottom: toRem(10);
+    @include adaptiveValue("font-size", 32, 22);
+    @include adaptiveValue("line-height", 47, 30);
+    &::selection {
+        background: $accent;
+    }
+}
+
+.text {
+    color: $text-secondary;
+    line-height: toRem(31);
+    @include adaptiveValue("font-size", 24, 16);
+    @include adaptiveValue("line-height", 31, 24);
+}
+
+.subtitle {
+    color: $text-secondary;
+    line-height: toRem(31);
+    @include adaptiveValue("font-size", 24, 16);
+    @include adaptiveValue("line-height", 31, 24);
+    @include adaptiveValue("max-width", 1105, 400);
+    margin: 0 auto;
+    @include adaptiveValue("margin-bottom", 70, 40);
+    text-align: center;
+}
+
+p::selection {
+    background: $accent;
+}
+
+
